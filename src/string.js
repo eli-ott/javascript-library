@@ -12,9 +12,38 @@ String.prototype.divide = function () {
     };
 }
 
+String.prototype.hasNumber = function () {
+    let string = this;
+    let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+    let stringHasNumber;
+    for (let i = 0; i < string.length; i++) {
+        let char = string[i];
+        for (let j = 0; j < number.length; j++) {
+            if (char = number[j] && char != ' '){
+                stringHasNumber = true;
+                break;
+            } else {
+                stringHasNumber = false;
+            }
+        }
+    }
+
+    return stringHasNumber;
+}
+
 //swapping two character of an string
 String.prototype.swap = function (oldIndex, newIndex) {
     let string = this;
+    
+    let splitString = [...string];
+    let firstChar = splitString[oldIndex - 1];
+    let secondChar = splitString[newIndex - 1];
+    
+    splitString[oldIndex - 1] = secondChar;
+    splitString[newIndex - 1] = firstChar;
+
+    return splitString;
 }
 
 //encoding method
@@ -33,7 +62,7 @@ String.prototype.encode = function (type, number = 0) {
             break;
         case 'rotate':
             console.log(number);
-        break;
+            break;
     }
 
     return encodeString;

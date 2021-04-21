@@ -9,12 +9,32 @@ Array.prototype.hasNumber = function () {
         if (hasNumber) break;
         let char = array[i];
 
-        for (let j = 0; j < numbers.length; j++) {
-            if (char == numbers[j] && char != ' ') {
-                hasNumber = true;
-                break;
-            } else {
-                hasNumber = false;
+        if (char.length > 1) {
+            console.log(char);
+            let splitChar = [...char];
+
+            for (let j = 0; j < splitChar.length; j++) {
+                if (hasNumber) break;
+                let secondChar = splitChar[j];
+
+                for (let k = 0; k < numbers.length; k++) {
+                    if (secondChar == numbers[k] && secondChar != ' '){
+                        hasNumber = true;
+                        break;
+                    } else {
+                        hasNumber = false;
+                    }
+                }
+            }
+
+        } else {
+            for (let j = 0; j < numbers.length; j++) {
+                if (char == numbers[j] && char != ' ') {
+                    hasNumber = true;
+                    break;
+                } else {
+                    hasNumber = false;
+                }
             }
         }
     }
@@ -33,15 +53,34 @@ Array.prototype.hasCharacter = function () {
         if (hasCharacter) break;
         let char = array[i];
 
-        for (let j = 0; j < alphabet.length; j++) {
-            if (char == alphabet[j] && char != ' ') {
-                hasCharacter = true;
-                break;
-            } else {
-                hasCharacter = false;
+        if(char.length > 1){
+            console.log(char);
+            let splitChar = [...char];
+            
+            for (let j = 0; j < splitChar.length; j++){
+                if(hasCharacter) break;
+                let secondChar = splitChar[j];
+
+                for(let k = 0; k < alphabet.length; k++){
+                    if(secondChar == alphabet[k]){
+                        hasCharacter = true;
+                        break;
+                    } else {
+                        hasCharacter = false;
+                    }
+                }
+            }
+        } else {
+            for (let j = 0; j < alphabet.length; j++) {
+                if (char == alphabet[j] && char != ' ') {
+                    hasCharacter = true;
+                    break;
+                } else {
+                    hasCharacter = false;
+                }
             }
         }
     }
 
     return hasCharacter;
-}
+} 

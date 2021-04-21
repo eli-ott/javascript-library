@@ -20,7 +20,7 @@ String.prototype.hasNumber = function () {
     for (let i = 0; i < string.length; i++) {
         let char = string[i];
         for (let j = 0; j < number.length; j++) {
-            if (char = number[j] && char != ' '){
+            if (char = number[j] && char != ' ') {
                 stringHasNumber = true;
                 break;
             } else {
@@ -34,36 +34,67 @@ String.prototype.hasNumber = function () {
 
 //swapping two character of an string
 String.prototype.swap = function (oldIndex, newIndex) {
-    let string = this;
-    
-    let splitString = [...string];
+    let splitString = [...this.trim()];
+
     let firstChar = splitString[oldIndex - 1];
     let secondChar = splitString[newIndex - 1];
-    
+
     splitString[oldIndex - 1] = secondChar;
     splitString[newIndex - 1] = firstChar;
 
     return splitString;
 }
 
-//encoding method
-String.prototype.encode = function (type, number = 0) {
-    let string = this;
-    let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    let encodeString;
-    switch (type) {
-        case 'number':
-            let indexes = [];
-            for (let i = 0; i < string.length; i++) {
-                let char = string[i];
-                indexes.push(alphabet.indexOf(char) + 1);
-            }
-            encodeString = indexes.join('-');
-            break;
-        case 'rotate':
-            console.log(number);
-            break;
+//kebab casing a string
+String.prototype.kebab = function () {
+    let splitString = [...this.trim()];
+
+    for (let i = 0; i < splitString.length; i++) {
+        if(splitString[i] == ' '){
+            splitString[i] = '-'
+        }
     }
 
-    return encodeString;
+    return splitString.join('');
+}
+
+//camel casing a string
+String.prototype.camel = function () {
+    let splitString = [...this.trim()];
+
+    for (let i = 0; i < splitString.length; i++) {
+        if(splitString[i] == ' '){
+            splitString[i + 1] = splitString[i + 1].toLocaleUpperCase();
+            splitString[i] = ''; 
+        }
+    }
+
+    return splitString.join('');
+}
+
+//snake casing a string
+String.prototype.snake = function () {
+    let string = this.trim();
+    let splitString = [...string];
+
+    for (let i = 0; i < splitString.length; i++) {
+        if(splitString[i] == ' '){
+            splitString[i] = '_';
+        }
+    }
+
+    return splitString.join('');
+}
+
+//removing all the white spaces of a tring
+String.prototype.noWhiteSpace = function () {
+    let splitString = [...this.trim()];
+
+    for (let i = 0; i < splitString.length; i++){
+        if(splitString[i] == ' '){
+            splitString[i] = '';
+        }
+    }
+
+    return splitString.join('');
 }

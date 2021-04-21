@@ -1,12 +1,12 @@
 # javascript-library
 
 1. [String Method](#string-method)
-..* [divide()](#stringdivide)
-..* [hasNumber()](#hasnumber)
-..* [swap()](#stringswapoldindex-newindex)
-..* [kebab()](#stringkebab)
-..* [snake()](#stringsnake)
-..* [noWhiteSpace()](#stringnowhtespace)
+⋅⋅* [divide()](#stringdivide)
+⋅⋅* [hasNumber()](#hasnumber)
+⋅⋅* [swap()](#stringswapoldindex-newindex)
+⋅⋅* [kebab()](#stringkebab)
+⋅⋅* [snake()](#stringsnake)
+⋅⋅* [noWhiteSpace()](#stringnowhtespace)
 
 ## <p align="center">`String Method`</p>
 ### <p align="center">String.divide()</p>

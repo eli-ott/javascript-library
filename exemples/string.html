@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../src/string.js"></script>
+    <title>String method exemples</title>
+    <style>
+        html{
+            font-family: monospace;
+            font-size: 2vh;
+            background: #e6e6e6;
+        }
+        body{
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+
+            height: 100vh;
+            width: 100vw;
+        }
+        p{
+            margin-right: 5vw;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Divide 'my name is john':
+        <br> <u>first part:</u> <span id="firstPart"></span>
+        <br> <u>second part:</u> <span id="secondPart"></span> 
+    </p>
+    <p>
+        Has number 'my name is john':
+        <span id="hasNumber1"></span>
+        <br> <br>
+        Has number 'i'm 25 years old':
+        <span id="hasNumber2"></span>
+    </p>
+    <p>
+        swap the 3 and 10 character of 'my name is john':
+        <span id="swap"></span>
+    </p>
+    <p>
+        kebab casing 'my name is john':
+        <span id="kebab"></span>
+        <br><br>
+        snake casing 'my name is john':
+        <span id="snake"></span>
+    </p>
+    <p>
+        No whitespace 'my name is john':
+        <span id="whiteSpace"></span>
+    </p>
+    <p>
+        Reverse 'my name is john':
+        <span id="reverse"></span>
+    </p>
+    <script type="text/javascript">        
+        document.getElementById('firstPart').innerHTML = 'my name is john'.divide().firstPart;
+        document.getElementById('secondPart').innerHTML = 'my name is john'.divide().secondPart;
+        document.getElementById('hasNumber1').innerHTML = 'my name is john'.hasNumber();
+        document.getElementById('hasNumber2').innerHTML = 'i"m 25 years old'.hasNumber();
+        document.getElementById('swap').innerHTML = 'my name is john'.swap(3, 10);
+        document.getElementById('kebab').innerHTML = 'my name is john'.kebab();
+        document.getElementById('snake').innerHTML = 'my name is john'.snake();
+        document.getElementById('whiteSpace').innerHTML = 'my name is john'.noWhiteSpace(); 
+        document.getElementById('reverse').innerHTML = 'my name is john'.reverse();
+    </script>
+</body>
+</html>

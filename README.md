@@ -9,8 +9,8 @@
     * [noWhiteSpace()](#stringnowhtespace)
 
 ## <p align="center">`String Method`</p>
-### <p align="center">String.divide()</p>
-This method is used to split a string in two part, right in the middle of that string.
+### <p align="center">String.divide()*.indexes*</p>
+This method is used to split a string in two part, right in the middle of that string. It return an object with two indexes, the first *index* is firstPartit return the first part of the string the other one is secondPart and return the second part of the divided string.
 
 ### <p align="center">String.hasNumber()</p>
 This method return true if there is a number inside the string and false if not.

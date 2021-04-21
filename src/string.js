@@ -18,9 +18,11 @@ String.prototype.hasNumber = function () {
 
     let stringHasNumber;
     for (let i = 0; i < string.length; i++) {
+        if(stringHasNumber) break;
         let char = string[i];
+        console.log(char);
         for (let j = 0; j < number.length; j++) {
-            if (char = number[j] && char != ' ') {
+            if (char == number[j] && char != ' ') {
                 stringHasNumber = true;
                 break;
             } else {
@@ -42,7 +44,7 @@ String.prototype.swap = function (oldIndex, newIndex) {
     splitString[oldIndex - 1] = secondChar;
     splitString[newIndex - 1] = firstChar;
 
-    return splitString;
+    return splitString.join('');
 }
 
 //kebab casing a string
@@ -97,4 +99,10 @@ String.prototype.noWhiteSpace = function () {
     }
 
     return splitString.join('');
+}
+
+//reverse a string 
+String.prototype.reverse = function () {
+    let splitString = [...this];
+    return splitString.reverse().join('');
 }

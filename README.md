@@ -1,5 +1,13 @@
 # javascript-library
 
+1. [String Method](#string-method)
+⋅⋅⋅ * [divide()](#stringdivide)
+⋅⋅⋅ * [hasNumber()](#hasnumber)
+⋅⋅⋅ * [swap()](#stringswapoldindex-newindex)
+⋅⋅⋅ * [kebab()](#stringkebab)
+⋅⋅⋅ * [snake()](#stringsnake)
+⋅⋅⋅ * [noWhiteSpace()](#stringnowhtespace)
+
 ## <p align="center"> `String Method` </p>
 ### <p align="center"> String.divide() </p>
 This method is used to split a string in two part, right in the middle of that string.

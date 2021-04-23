@@ -132,8 +132,8 @@ Array.prototype.noExtraSpace = function () {
     let stringArray = array.toLocaleString();
     let stringPart;
 
-    for (let i = 0; i <= stringArray.length; i++){
-        if(stringArray[i] == ','){
+    for (let i = 0; i <= stringArray.length; i++) {
+        if (stringArray[i] == ',') {
             stringPart = stringArray.slice(previousIndex, i).trim();
             filteredArray[filterIndex] = stringPart;
             previousIndex = i + 1;
@@ -141,7 +141,7 @@ Array.prototype.noExtraSpace = function () {
         }
     }
 
-    if(array[array.length - 1] != filteredArray[filteredArray.length - 1]){
+    if (array[array.length - 1] != filteredArray[filteredArray.length - 1]) {
         filteredArray[filteredArray.length - 1] = array[array.length - 1].trim();
     }
 
@@ -150,7 +150,22 @@ Array.prototype.noExtraSpace = function () {
 
 Array.prototype.noWhiteSpace = function () {
     let array = this;
-    let filteredArrayarray = [];
+    let filteredArray = [];
 
-    
+    for (let i = 0; i < array.length; i++) {
+        if(array[i] != undefined && array[i] != null && array[i] != ' ' && array[i].length < 2){
+            filteredArray.push(array[i]);
+        } else if(array[i].length >= 2){
+            let char = array[i];
+            let splitChar = char.split('');
+            for (let j = 0; j < splitChar.length; j++){
+                if(splitChar[j] == ' '){
+                    splitChar[j] = '';
+                }
+            }
+            filteredArray.push(splitChar.join(''));
+        }
+    }
+
+    return filteredArray;
 }

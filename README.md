@@ -11,8 +11,8 @@
     * [divide()](#arraydivide)
     * [hasNumber()](#arrayhasnumber)
     * [hasCharacter()](#arrayhascharacter)
-    * [remove()](#arrayremoveindex1-index2-index3-...)
-    * [keep()](#arraykeepindex1-index2-index3-...)
+    * [remove()](#arrayremoveindex1-index2-index3-)
+    * [keep()](#arraykeepindex1-index2-index3-)
     * [noExtraSpace()](#arraynoextraspace)
     * [noWhiteSpace()](#arraynowhitespace)
 

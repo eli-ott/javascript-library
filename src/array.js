@@ -1,3 +1,18 @@
+//split an arrray in two parts
+Array.prototype.divide = function () {
+    let array = this;
+    let firstPart;
+    let secondPart;
+
+    firstPart = array.slice(0, array.length / 2);
+    secondPart = array.slice(array.length / 2, array.length);
+
+    return {
+        'firstPart': firstPart,
+        'secondPart': secondPart
+    };
+}
+
 //chrcking if the array has a number
 Array.prototype.hasNumber = function () {
     let array = this;
@@ -18,7 +33,7 @@ Array.prototype.hasNumber = function () {
                 let secondChar = splitChar[j];
 
                 for (let k = 0; k < numbers.length; k++) {
-                    if (secondChar == numbers[k] && secondChar != ' '){
+                    if (secondChar == numbers[k] && secondChar != ' ') {
                         hasNumber = true;
                         break;
                     } else {
@@ -53,16 +68,16 @@ Array.prototype.hasCharacter = function () {
         if (hasCharacter) break;
         let char = array[i];
 
-        if(char.length > 1){
+        if (char.length > 1) {
             console.log(char);
             let splitChar = [...char];
-            
-            for (let j = 0; j < splitChar.length; j++){
-                if(hasCharacter) break;
+
+            for (let j = 0; j < splitChar.length; j++) {
+                if (hasCharacter) break;
                 let secondChar = splitChar[j];
 
-                for(let k = 0; k < alphabet.length; k++){
-                    if(secondChar == alphabet[k]){
+                for (let k = 0; k < alphabet.length; k++) {
+                    if (secondChar == alphabet[k]) {
                         hasCharacter = true;
                         break;
                     } else {
@@ -83,4 +98,59 @@ Array.prototype.hasCharacter = function () {
     }
 
     return hasCharacter;
-} 
+}
+
+Array.prototype.remove = function (...index) {
+    let array = this;
+
+    let removeIndex = 1;
+    index.forEach((element) => {
+        array.splice(element - removeIndex, 1);
+        removeIndex++;
+    });
+
+    return array;
+}
+
+Array.prototype.keep = function (...index) {
+    let array = this;
+    let filteredArray = [];
+
+    index.forEach(index => {
+        filteredArray.push(array[index - 1]);
+    });
+
+    return filteredArray;
+}
+
+Array.prototype.noExtraSpace = function () {
+    let array = this;
+    let filteredArray = [];
+
+    let filterIndex = 0;
+    let previousIndex = 0;
+    let stringArray = array.toLocaleString();
+    let stringPart;
+
+    for (let i = 0; i <= stringArray.length; i++){
+        if(stringArray[i] == ','){
+            stringPart = stringArray.slice(previousIndex, i).trim();
+            filteredArray[filterIndex] = stringPart;
+            previousIndex = i + 1;
+            filterIndex++;
+        }
+    }
+
+    if(array[array.length - 1] != filteredArray[filteredArray.length - 1]){
+        filteredArray[filteredArray.length - 1] = array[array.length - 1].trim();
+    }
+
+    return filteredArray;
+}
+
+Array.prototype.noWhiteSpace = function () {
+    let array = this;
+    let filteredArrayarray = [];
+
+    
+}

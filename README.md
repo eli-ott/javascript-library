@@ -58,3 +58,6 @@ This method remove all the extra space at the begining and at the end of the arr
 
 ### <p align="center">Array.noWhiteSpace()</p>
 This method remove all the space of the array element. It'll also remove empty string or empty element. For exemple if an element is null or undefined it'll remove it as it'll remove empty strings.
+
+### <p align="center">Array.multiply(*number*, *secondArray*)</p>
+This method is used to whether mutiply all the array by a specific number or whether to multiply two array between them. To multiply an array by a number only write your number in the parameter. If you want to multiply an array by an other write *1* in the first parameter and choose your second array in the second parameter. 

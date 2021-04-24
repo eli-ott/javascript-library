@@ -177,3 +177,34 @@ Array.prototype.noWhiteSpace = function () {
 
     return filteredArray;
 }
+
+Array.prototype.multiply = function (number = 1, secondArray = []) {
+    let array = this;
+    let filteredArray = [];
+
+    let biggerArray;
+    if(secondArray.length < 1){
+        biggerArray = array;
+    } else if(secondArray.length > 0) {
+        if(array.length > secondArray.length){
+            biggerArray = array;
+        } else if(array.length < secondArray.length){
+            biggerArray = secondArray;
+        } else if(array.length == secondArray.length){
+            biggerArray = array;
+        }
+    }
+    if(number != 1){
+        for (let i = 0; i < biggerArray.length; i++){
+            filteredArray.push(array[i] * number);
+        } 
+    }
+
+    if (secondArray.length > 0) {
+        for (let i = 0; i < biggerArray.length; i++){
+            filteredArray.push(array[i] * secondArray[i]);
+        }
+    }
+
+    return filteredArray;
+}

@@ -39,12 +39,14 @@ This method return your string with a camel case. For exemple if your string is 
 This method is used to remove all the white spaces in a string. For exemple if your string is 'hello world' it'll return 'helloworld'.
 
 ## <p align="center">`Array Method`</p>
-### <p align="center">Array.divide().index</p>
+### <p align="center">Array.divide()*.index*</p>
 This method is used to split a array in two part, right in the middle of that array. It return an object with two indexes, the first *index* is firstPartit return the first part of the array the other one is secondPart and return the second part of the divided array. 
 ### <p align="center">Array.hasNumber()</p>
 This method is used to check if there is a number in the array. For exemple if the array is ["hello", "i'm 25"], the method will return. *This method doesn't work on multidimensional array.*
 ### <p align="center">Array.hasCharacter()</p>
 This method is used to check if there is a character in the array. For exemple if the array is [14543, "25", "431e43"], the method will return. *This method doesn't work on multidimensional array.*
+### <p align="center">Array.moveTo(*start*, *end*, *[array]*, *position*)</p>
+This method is used to move a part of the array to another specific array. If there's no array selected it'll crete a new one. *start* and *end* index begin at 1. The position parameter specify the place where the element will move, you have the choice between **start** and **end**, **start** will move the element at the begining of the newArrat and **end** at the end. If no position is specify it'll move the elements at the end of the new array. 
 ### <p align="center">Array.remove(*index1*, *index2*, *index3*, *...*)</p>
 This method is used to remove a special element from the arrat. Indexes start at 1. For multidimensional array it'll remove all the child array.
 

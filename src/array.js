@@ -1,4 +1,3 @@
-//split an arrray in two parts
 Array.prototype.divide = function () {
     let array = this;
     let firstPart;
@@ -13,7 +12,6 @@ Array.prototype.divide = function () {
     };
 }
 
-//chrcking if the array has a number
 Array.prototype.hasNumber = function () {
     let array = this;
     let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -57,7 +55,6 @@ Array.prototype.hasNumber = function () {
     return hasNumber
 }
 
-//checking if the array has a char
 Array.prototype.hasCharacter = function () {
     let array = this;
     let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
@@ -98,6 +95,17 @@ Array.prototype.hasCharacter = function () {
     }
 
     return hasCharacter;
+}
+
+Array.prototype.moveTo = function (start, end, newArray = [], position = 'end') {
+    let array = this;
+
+    for (let i = start - 1; i < end; i++) {
+        if (position == 'end') newArray.push(array[i]);
+        else if (position == 'start') newArray.unshift(array[i]);
+    }
+
+    return newArray;
 }
 
 Array.prototype.remove = function (...index) {
@@ -153,13 +161,13 @@ Array.prototype.noWhiteSpace = function () {
     let filteredArray = [];
 
     for (let i = 0; i < array.length; i++) {
-        if(array[i] != undefined && array[i] != null && array[i] != ' ' && array[i].length < 2){
+        if (array[i] != undefined && array[i] != null && array[i] != ' ' && array[i].length < 2) {
             filteredArray.push(array[i]);
-        } else if(array[i].length >= 2){
+        } else if (array[i].length >= 2) {
             let char = array[i];
             let splitChar = char.split('');
-            for (let j = 0; j < splitChar.length; j++){
-                if(splitChar[j] == ' '){
+            for (let j = 0; j < splitChar.length; j++) {
+                if (splitChar[j] == ' ') {
                     splitChar[j] = '';
                 }
             }

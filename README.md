@@ -15,6 +15,9 @@
     * [keep()](#arraykeepindex1-index2-index3-)
     * [noExtraSpace()](#arraynoextraspace)
     * [noWhiteSpace()](#arraynowhitespace)
+    * [multiply()](#arraymultiplynumber-secondarray)
+    * [add()](#arrayaddnumber-secondarray)
+    * [subtract()](#arraysubtractnumber-secondarray)
 
 ## <p align="center">`String Method`</p>
 ### <p align="center">String.divide()*.index*</p>
@@ -61,3 +64,9 @@ This method remove all the space of the array element. It'll also remove empty s
 
 ### <p align="center">Array.multiply(*number*, *secondArray*)</p>
 This method is used to whether mutiply all the array by a specific number or whether to multiply two array between them. To multiply an array by a number only write your number in the parameter. If you want to multiply an array by an other write *1* in the first parameter and choose your second array in the second parameter. 
+
+### <p align="center">Array.add(*number*, *secondArray*)</p>
+Same as the [Array.multiply()](#arraymultiplynumber-secondarray) but it add the number and not multiply them.
+
+### <p align="center">Array.subtract(*number*, *secondArray*)</p>
+Same as the [Array.multiply()](#arraymultiplynumber-secondarray) but it subtract the number and not multiply them.

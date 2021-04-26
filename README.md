@@ -75,14 +75,19 @@ Same as the [Array.multiply()](#arraymultiplynumber-secondarray) but it subtract
 
 # <p align="center">**Classes**</p>
 
-## Intro
+### <p align="center">Intro</p>
 The classes part is quite easy to understand and is easy to use. The concept between this is that you only need to add a class to a *form* for exmple or a *nav* to have an HTML template whithout writing it. You just add the class and the templates 'pop up'.
 
-### How to use it
+### <p align="center">How to use it</p>
+You just have to import the right script and style into your head tag in your HTML file.
 
-You just have to import the right script and style. For exemple if you want to use the form templates you have to add the following lines of code in the *head* of your HTML :
-
+### Form classes
+CDN links :
+script :  
+```html
+    <script src="https://cdn.jsdelivr.net/gh/eli-ott/javascript-library/src/class/form.js"></script>
+```
+style : 
 ```html
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eli-ott/javascript-library/src/class/style/form.css"></link>
-    <script src="https://raw.githubusercontent.com/eli-ott/javascript-library/main/src/class/form.js"></script>
 ```

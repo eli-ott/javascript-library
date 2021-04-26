@@ -1,27 +1,35 @@
 let checkClassInterval = setInterval(() => {
-    if (document.querySelectorAll('.form1').length
-        || document.querySelectorAll('.form2').length) {
+    if (document.querySelectorAll('.signinForm').length
+        || document.querySelectorAll('.signupForm').length) {
         clearInterval(checkClassInterval);
         createForm();
     }
 }, 100);
 
 let form = {
-    form1: `
-        <input type="email"></input>
-        <input type="password"></input>
-        <input type="submit"></input>
+    signin: `
+        <input required type="email" placeholder="Email / Username"></input>
+        <input required type="password" placeholder="Password"></input>
+        <input required type="submit" value="SIGN IN"></input>
     `,
-    form2: `
-    
+    signup: `
+        <input required type="text" placeholder="Username"></input> 
+        <input required type="email" placeholder="Email"></input>
+        <input required type="password" placeholder="Password"></input>
+        <input required type="password" placeholder="Pasword confirmation"></input>
+        <input required type="submit" value="SIGN UP"></input>
     `
 };
 
 const createForm = () => {
-    if (document.querySelectorAll('.form1').length > 0) {
-
+    if (document.querySelectorAll('.signinForm').length > 0) {
+        for (let i = 0; i < document.querySelectorAll('.signinForm').length; i++) {
+            document.getElementsByClassName('signinForm')[i].innerHTML = form.signin;
+        }
     }
-    if (document.querySelectorAll('.form2').length) {
-
+    if (document.querySelectorAll('.signupForm').length) {
+        for (let i = 0; i < document.querySelectorAll('.signupForm').length; i++) {
+            document.getElementsByClassName('signupForm')[i].innerHTML = form.signup;
+        }
     }
 }

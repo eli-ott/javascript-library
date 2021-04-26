@@ -19,6 +19,8 @@
     * [add()](#arrayaddnumber-secondarray)
     * [subtract()](#arraysubtractnumber-secondarray)
 
+# <p align="center">**Methods**</p>
+
 ## <p align="center">`String Method`</p>
 ### <p align="center">String.divide()*.index*</p>
 This method is used to split a string in two part, right in the middle of that string. It return an object with two indexes, the first *index* is firstPartit return the first part of the string the other one is secondPart and return the second part of the divided string.
@@ -70,3 +72,15 @@ Same as the [Array.multiply()](#arraymultiplynumber-secondarray) but it add the 
 
 ### <p align="center">Array.subtract(*number*, *secondArray*)</p>
 Same as the [Array.multiply()](#arraymultiplynumber-secondarray) but it subtract the number and not multiply them.
+
+# <p align="center">**Classes**</p>
+
+## Intro
+The classes part is quite easy to understand and is easy to use. The concept between this is that you only need to add a class to a *form* for exmple or a *nav* to have an HTML template whithout writing it. You just add the class and the templates 'pop up'.
+
+### How to use it
+
+You just have to import the right script and style. For exemple if you want to use the form templates you have to add the following lines of code in the *head* of your HTML : 
+```html
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eli-ott/javascript-library/src/class/style/form.css"></link>
+```

@@ -80,7 +80,9 @@ The classes part is quite easy to understand and is easy to use. The concept bet
 
 ### How to use it
 
-You just have to import the right script and style. For exemple if you want to use the form templates you have to add the following lines of code in the *head* of your HTML : 
+You just have to import the right script and style. For exemple if you want to use the form templates you have to add the following lines of code in the *head* of your HTML :
+
 ```html
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eli-ott/javascript-library/src/class/style/form.css"></link>
+    <script src="https://raw.githubusercontent.com/eli-ott/javascript-library/main/src/class/form.js"></script>
 ```

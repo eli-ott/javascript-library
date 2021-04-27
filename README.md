@@ -81,7 +81,7 @@ The classes part is quite easy to understand and is easy to use. The concept bet
 ### <p align="center">How to use it</p>
 You just have to import the right script and style into your head tag in your HTML file.
 
-### Form classes
+### Use form classes
 CDN links :
 script :  
 ```html

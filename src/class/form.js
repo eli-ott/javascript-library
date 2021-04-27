@@ -1,13 +1,13 @@
-let checkClassInterval = setInterval(() => {
+let checkFormClass = setInterval(() => {
     if (document.querySelectorAll('.signinForm').length
         || document.querySelectorAll('.signupForm').length
         || document.querySelectorAll('.emailForm').length) {
-        clearInterval(checkClassInterval);
+        clearInterval(checkFormClass);
         createForm();
     }
 }, 100);
 
-let form = {
+const form = {
     signin: `
         <input required type="email" placeholder="Email / Username"></input>
         <input required type="password" placeholder="Password"></input>

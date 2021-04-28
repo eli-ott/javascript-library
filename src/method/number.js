@@ -16,21 +16,22 @@ Number.prototype.toBinary = function () {
     let binaryNumber = [];
 
     let canReturn = false
-    let binaryInterval = setInterval(() => {
-        if (Math.floor(number) % 2 == 0 && Math.floor(number) != 1) binaryNumber.unshift(0);
-        else if (Math.floor(number) != 1) binaryNumber.unshift(1);
-        
-        if (Math.floor(number) == 1) {
-            if(Math.floor(number) % 2 == 1) binaryNumber.unshift(1);
-        
-            clearInterval(binaryInterval); 
-            canReturn = true;
+    if (!canReturn) {
+        for (let i = 0; i < number; number = number / 2) {
+            if (Math.floor(number) % 2 == 0 && Math.floor(number) != 1) binaryNumber.unshift(0);
+            else if (Math.floor(number) != 1) binaryNumber.unshift(1);
+
+            if (Math.floor(number) == 1) {
+                if (Math.floor(number) % 2 == 1) binaryNumber.unshift(1);
+                canReturn = true;
+                break;
+            }
         }
-        
-        number = number / 2;
 
-        //PROBLEME DE RETURN SA NE RETURN RIEN DU TOUT
-
-        if(canReturn) return binaryNumber.join('');
-    }, 10);
+        if (canReturn) {
+            return (parseInt(binaryNumber.join('')));
+        } else {
+            return "Not a valid number";
+        }
+    }
 }

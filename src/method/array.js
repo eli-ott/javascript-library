@@ -13,12 +13,12 @@ Array.prototype.divide = function () {
 }
 
 Array.prototype.hasNumber = function () {
-    if(this.join('').match(/[0-9]/g) != null) return true;
+    if (this.join('').match(/[0-9]/g) != null) return true;
     return false;
 }
 
 Array.prototype.hasCharacter = function () {
-    if(this.join('').match(/[A-Za-z]/g) != null) return true;
+    if (this.join('').match(/[A-Za-z]/g) != null) return true;
     return false;
 }
 
@@ -108,25 +108,25 @@ Array.prototype.multiply = function (number = 1, secondArray = []) {
     let filteredArray = [];
 
     let biggerArray;
-    if(secondArray.length < 1){
+    if (secondArray.length < 1) {
         biggerArray = array;
-    } else if(secondArray.length > 0) {
-        if(array.length > secondArray.length){
+    } else if (secondArray.length > 0) {
+        if (array.length > secondArray.length) {
             biggerArray = array;
-        } else if(array.length < secondArray.length){
+        } else if (array.length < secondArray.length) {
             biggerArray = secondArray;
-        } else if(array.length == secondArray.length){
+        } else if (array.length == secondArray.length) {
             biggerArray = array;
         }
     }
-    if(number != 1){
-        for (let i = 0; i < biggerArray.length; i++){
+    if (number != 1) {
+        for (let i = 0; i < biggerArray.length; i++) {
             filteredArray.push(array[i] * number);
-        } 
+        }
     }
 
     if (secondArray.length > 0) {
-        for (let i = 0; i < biggerArray.length; i++){
+        for (let i = 0; i < biggerArray.length; i++) {
             filteredArray.push(array[i] * secondArray[i]);
         }
     }
@@ -139,25 +139,25 @@ Array.prototype.add = function (number = 1, secondArray = []) {
     let filteredArray = [];
 
     let biggerArray;
-    if(secondArray.length < 1){
+    if (secondArray.length < 1) {
         biggerArray = array;
-    } else if(secondArray.length > 0) {
-        if(array.length > secondArray.length){
+    } else if (secondArray.length > 0) {
+        if (array.length > secondArray.length) {
             biggerArray = array;
-        } else if(array.length < secondArray.length){
+        } else if (array.length < secondArray.length) {
             biggerArray = secondArray;
-        } else if(array.length == secondArray.length){
+        } else if (array.length == secondArray.length) {
             biggerArray = array;
         }
     }
-    if(number != 1){
-        for (let i = 0; i < biggerArray.length; i++){
+    if (number != 1) {
+        for (let i = 0; i < biggerArray.length; i++) {
             filteredArray.push(array[i] + number);
-        } 
+        }
     }
 
     if (secondArray.length > 0) {
-        for (let i = 0; i < biggerArray.length; i++){
+        for (let i = 0; i < biggerArray.length; i++) {
             filteredArray.push(array[i] + secondArray[i]);
         }
     }
@@ -170,25 +170,25 @@ Array.prototype.subtract = function (number = 1, secondArray = []) {
     let filteredArray = [];
 
     let biggerArray;
-    if(secondArray.length < 1){
+    if (secondArray.length < 1) {
         biggerArray = array;
-    } else if(secondArray.length > 0) {
-        if(array.length > secondArray.length){
+    } else if (secondArray.length > 0) {
+        if (array.length > secondArray.length) {
             biggerArray = array;
-        } else if(array.length < secondArray.length){
+        } else if (array.length < secondArray.length) {
             biggerArray = secondArray;
-        } else if(array.length == secondArray.length){
+        } else if (array.length == secondArray.length) {
             biggerArray = array;
         }
     }
-    if(number != 1){
-        for (let i = 0; i < biggerArray.length; i++){
+    if (number != 1) {
+        for (let i = 0; i < biggerArray.length; i++) {
             filteredArray.push(array[i] - number);
-        } 
+        }
     }
 
     if (secondArray.length > 0) {
-        for (let i = 0; i < biggerArray.length; i++){
+        for (let i = 0; i < biggerArray.length; i++) {
             filteredArray.push(array[i] - secondArray[i]);
         }
     }
@@ -196,3 +196,25 @@ Array.prototype.subtract = function (number = 1, secondArray = []) {
     return filteredArray;
 }
 
+Array.prototype.countDuplicates = function () {
+    let array = this;
+    let duplicatesName = [];
+
+    for (let i = 0; i < array.length; i++) {
+        if (array.lastIndexOf(array[i]) != i) {
+            duplicatesName.push(array[i]);
+        }
+    }
+
+    duplicatesName = [...new Set(duplicatesName)];
+    return {
+        'names': duplicatesName,
+        'count': duplicatesName.length
+    }
+}
+
+Array.prototype.removeDuplicates = function (...keep) {
+    let array = this;
+
+    //delete all the duplicate elements excepet for the keep ones that are passed as arguments
+}

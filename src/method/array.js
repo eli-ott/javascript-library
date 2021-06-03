@@ -222,7 +222,7 @@ Array.prototype.areEqual = function (secondArray) {
 
     if(firstArray.length != secondArray.length) return false;
 
-    for (let i = 0; i < array.length; i++) {
+    for (let i = 0; i < firstArray.length; i++) {
         if(firstArray[i] !== secondArray[i]) return false;
     }
     

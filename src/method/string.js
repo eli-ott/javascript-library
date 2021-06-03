@@ -1,4 +1,4 @@
-//spliting an array in two method
+//splitting an array in two method
 String.prototype.divide = function () {
     let stringLength = this.length;
     let midString = stringLength / 2;

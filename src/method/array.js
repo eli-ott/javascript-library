@@ -216,3 +216,15 @@ Array.prototype.countDuplicates = function () {
 Array.prototype.removeDuplicates = function () {
     return [...new Set(this)];
 }
+
+Array.prototype.areEqual = function (secondArray) {
+    let firstArray = this;
+
+    if(firstArray.length != secondArray.length) return false;
+
+    for (let i = 0; i < array.length; i++) {
+        if(firstArray[i] !== secondArray[i]) return false;
+    }
+    
+    return true;
+}

@@ -213,8 +213,6 @@ Array.prototype.countDuplicates = function () {
     }
 }
 
-Array.prototype.removeDuplicates = function (...keep) {
-    let array = this;
-
-    //delete all the duplicate elements excepet for the keep ones that are passed as arguments
+Array.prototype.removeDuplicates = function () {
+    return [...new Set(this)];
 }
